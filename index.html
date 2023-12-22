@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMarker</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Righteous&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="image/bookmark-flat.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <main >
+        <!-- strat first section  layout -->
+            <div class="container   mt-5">
+                <h1 class="main-header text-center pt-5">Bookmark</h1>
+                <div class="row  pt-5 mt-5 row-one">
+                    <div class="col-md-6 item">
+                       <img src="image/d28b99caa111bdbd4cc55ddaf7b1913a.gif" alt="">
+                    </div>
+                    <div class="col-md-6 item">
+                        <i class="fa-solid fa-bookmark fa-2x me-1 i-one fa-beat"></i><h2><span class="litter-1">Bookmark </span> <span class="litter-2">Your</span> <span class="litter-3"> Favoraite</span> <span class="litter-4">Site</span> </h2><i class="fa-solid fa-bookmark fa-2x i-two fa-beat"></i><br>
+                        <label for="siteName" class="mt-2"><i class="fa-regular fa-bookmark text-danger"></i>  Site Name : </label>
+                        <input type="text" class="form-control " required id="siteName" name="siteName ">
+                        <label for="siteURL" class="mt-2 " ><i class="fa-solid fa-link text-danger"></i> Site URL : </label>
+                        <input type="text" class="form-control" required id="siteURL" name="siteURL">
+                       
+                        <button class="btu btu1 mt-5" onclick="addSubmetUrl()">Submet</button>
+                        <button class="btu btu2 mt-5 " onclick="clearInput()">Clear</button>
+                    </div>
+                </div>
+            </div>
+        <!-- end first section  layout -->
+        <!-- start setion two layout( search )  -->
+            <input oninput="searchByName()" type="search" placeholder="Search By Name..." class="w-75 form-control mx-auto mt-5" id="searchUrlName">
+        <!-- end setion two layout  -->
+        <!-- ******************************************* -->
+        <!-- start setion three layout -->
+            <div class="container  mt-5">
+                <div class="row  justify-content-center" id="addNewDiv">
+                    <!-- <div class="col-md-4  m-2 model p-3 rounded-3">
+                        <div class="items text-center">
+                            <img src="image/giphy.gif" alt="" class="rounded-circle img-fluid">
+                            <button class=" btu3"><i class="fa-solid fa-xmark "></i></button><br>
+                            <button class="btu-4">ay haga</button> <br>
+                            <a target="_blank" href="https://www.google.com/"><button class="btu5 mt-3  " ><span><i class="fa-solid fa-eye"></i></span> Visit</button>
+                            </a>
+                            <button class="btu6 mt-3 ms-4"> <span><i class="fa-regular fa-trash-can"></i></span> Delete</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4  m-2 model p-3 rounded-3">
+                        <div class="items text-center">
+                            <img src="image/giphy.gif" alt="" class="rounded-circle img-fluid">
+                            <button class=" btu3"><i class="fa-solid fa-xmark"></i></button><br>
+                            <button class="btu-4">ay haga</button> <br>
+                            <a target="_blank" href="https://www.google.com/"><button class="btu5 mt-3  " ><span><i class="fa-solid fa-eye"></i></span> Visit</button>
+                            </a>
+                            <button class="btu6 mt-3 ms-4"> <span><i class="fa-regular fa-trash-can"></i></span> Delete</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4  m-2 model p-3 rounded-3">
+                        <div class="items text-center">
+                            <img src="image/giphy.gif" alt="" class="rounded-circle img-fluid">
+                            <button class=" btu3"><i class="fa-solid fa-xmark"></i></button><br>
+                            <button class="btu-4">ay haga</button> <br>
+                            <a target="_blank" href="https://www.google.com/"><button class="btu5 mt-3  " ><span><i class="fa-solid fa-eye"></i></span> Visit</button>
+                            </a>
+                            <button class="btu6 mt-3 ms-4"> <span><i class="fa-regular fa-trash-can"></i></span> Delete</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4  m-2 model p-3 rounded-3">
+                        <div class="items text-center">
+                            <img src="image/giphy.gif" alt="" class="rounded-circle img-fluid">
+                            <button class=" btu3"><i class="fa-solid fa-xmark"></i></button><br>
+                            <button class="btu-4">ay haga</button> <br>
+                            <a target="_blank" href="https://www.google.com/"><button class="btu5 mt-3  " ><span><i class="fa-solid fa-eye"></i></span> Visit</button>
+                            </a>
+                            <button class="btu6 mt-3 ms-4"> <span><i class="fa-regular fa-trash-can"></i></span> Delete</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4  m-2 model p-3 rounded-3">
+                        <div class="items text-center">
+                            <img src="image/giphy.gif" alt="" class="rounded-circle img-fluid">
+                            <button class=" btu3"><i class="fa-solid fa-xmark"></i></button><br>
+                            <button class="btu-4">ay haga</button> <br>
+                            <a target="_blank" href="https://www.google.com/"><button class="btu5 mt-3  " ><span><i class="fa-solid fa-eye"></i></span> Visit</button>
+                            </a>
+                            <button class="btu6 mt-3 ms-4"> <span><i class="fa-regular fa-trash-can"></i></span> Delete</button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        <!-- end setion three layout -->
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
